@@ -1,17 +1,19 @@
 {
-  "name": "motor-transits",
+  "name": "motor-astrologico",
   "version": "1.0.0",
-  "description": "API de cálculo de posições planetárias e trânsitos",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "express": "^4.19.2",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "swisseph-v2": "^1.0.4"
+    "swisseph-v2": "^2.10.3"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

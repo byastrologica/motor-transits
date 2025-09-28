@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Astrologia</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f4f4; color: #333; }
+        h1, h2 { color: #2c3e50; }
+        #container { display: flex; flex-wrap: wrap; gap: 40px; }
+        .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex: 1; min-width: 300px; }
+        pre { background: #ecf0f1; padding: 15px; border-radius: 4px; white-space: pre-wrap; word-wrap: break-word; font-family: monospace; }
+        form { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        input { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        button { grid-column: span 2; padding: 12px; background-color: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #2980b9; }
+    </style>
+</head>
+<body>
+    <h1>Dashboard de Astrologia</h1>
+    <div id="container">
+        <div class="card">
+            <h2>Posição Atual dos Planetas</h2>
+            <button id="btnAtualizarPlanetas">Atualizar Agora</button>
+            <pre id="posicoesAtuais">Clique no botão para carregar...</pre>
+        </div>
+        <div class="card">
+            <h2>Calcular Mapa Astral Completo</h2>
+            <form id="mapaForm">
+                <input type="number" id="ano" placeholder="Ano (ex: 1990)" required>
+                <input type="number" id="mes" placeholder="Mês (ex: 4)" required>
+                <input type="number" id="dia" placeholder="Dia (ex: 15)" required>
+                <input type="number" id="hora" placeholder="Hora (ex: 14)" required>
+                <input type="number" id="minuto" placeholder="Minuto (ex: 30)" required>
+                <input type="number" step="any" id="lat" placeholder="Latitude (ex: -23.55)" required>
+                <input type="number" step="any" id="lon" placeholder="Longitude (ex: -46.63)" required>
+                <button type="submit">Calcular Mapa</button>
+            </form>
+            <pre id="mapaCompleto">Preencha o formulário para calcular.</pre>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
